@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -13,12 +14,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BadgeSampleComponent } from './badge-sample/badge-sample.component';
 import { CheckboxSampleComponent } from './checkbox-sample/checkbox-sample.component';
+import { ConfirmDialogComponent } from './dialog-sample/confirm-dialog/confirm-dialog.component';
+import { DialogSampleComponent } from './dialog-sample/dialog-sample.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BadgeSampleComponent,
-    CheckboxSampleComponent
+    CheckboxSampleComponent,
+    DialogSampleComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     AppRoutingModule,
@@ -28,6 +33,7 @@ import { CheckboxSampleComponent } from './checkbox-sample/checkbox-sample.compo
     MatBadgeModule,
     MatButtonModule,
     MatCheckboxModule,
+    MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
     MatToolbarModule,

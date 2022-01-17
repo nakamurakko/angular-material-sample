@@ -1,0 +1,29 @@
+<h2>dialog-sample works!</h2>
+
+<div class="div-padding">
+
+  <button mat-raised-button
+          (click)="onOpenDialog1()">Open Dialog (パターン1)</button>
+  <div>
+    <mat-form-field>
+      <mat-label>結果1</mat-label>
+      <input matInput
+             [(ngModel)]="dialogResult1" />
+    </mat-form-field>
+  </div>
+
+</div>
+
+<div class="div-padding">
+
+  <button mat-raised-button
+          (click)="onOpenDialog2()">Open Dialog (パターン2)</button>
+  <div>
+    <mat-form-field>
+      <mat-label>結果2</mat-label>
+      <input matInput
+             [(ngModel)]="dialogResult2" />
+    </mat-form-field>
+  </div>
+
+</div>
