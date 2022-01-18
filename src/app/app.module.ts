@@ -16,6 +16,7 @@ import { BadgeSampleComponent } from './badge-sample/badge-sample.component';
 import { CheckboxSampleComponent } from './checkbox-sample/checkbox-sample.component';
 import { ConfirmDialogComponent } from './dialog-sample/confirm-dialog/confirm-dialog.component';
 import { DialogSampleComponent } from './dialog-sample/dialog-sample.component';
+import { FormFieldSampleComponent } from './form-field-sample/form-field-sample.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { DialogSampleComponent } from './dialog-sample/dialog-sample.component';
     BadgeSampleComponent,
     CheckboxSampleComponent,
     DialogSampleComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    FormFieldSampleComponent
   ],
   imports: [
     AppRoutingModule,
