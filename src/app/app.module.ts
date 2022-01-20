@@ -6,6 +6,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,6 +18,7 @@ import { CheckboxSampleComponent } from './checkbox-sample/checkbox-sample.compo
 import { ConfirmDialogComponent } from './dialog-sample/confirm-dialog/confirm-dialog.component';
 import { DialogSampleComponent } from './dialog-sample/dialog-sample.component';
 import { FormFieldSampleComponent } from './form-field-sample/form-field-sample.component';
+import { MenuSampleComponent } from './menu-sample/menu-sample.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { FormFieldSampleComponent } from './form-field-sample/form-field-sample.
     CheckboxSampleComponent,
     DialogSampleComponent,
     ConfirmDialogComponent,
-    FormFieldSampleComponent
+    FormFieldSampleComponent,
+    MenuSampleComponent
   ],
   imports: [
     AppRoutingModule,
@@ -38,6 +41,7 @@ import { FormFieldSampleComponent } from './form-field-sample/form-field-sample.
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
+    MatMenuModule,
     MatToolbarModule,
   ],
   providers: [],

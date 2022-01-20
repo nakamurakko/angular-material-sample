@@ -1,0 +1,25 @@
+<h2>menu-sample</h2>
+
+<div class="div-padding">
+
+  <div>
+    <button mat-raised-button
+            [matMenuTriggerFor]="menu">メニュー</button>
+    <mat-menu #menu="matMenu"
+              xPosition="before">
+      <button mat-menu-item
+              (click)="onClick($event, 'Item 1')">Item 1</button>
+      <button mat-menu-item
+              (click)="onClick($event, 'Item 2')">Item 2</button>
+    </mat-menu>
+  </div>
+
+  <div>
+    <mat-form-field>
+      <mat-label>選択値</mat-label>
+      <input matInput
+             [(ngModel)]="selectedValue" />
+    </mat-form-field>
+  </div>
+
+</div>
