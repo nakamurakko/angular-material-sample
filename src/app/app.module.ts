@@ -7,6 +7,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -19,6 +20,7 @@ import { ConfirmDialogComponent } from './dialog-sample/confirm-dialog/confirm-d
 import { DialogSampleComponent } from './dialog-sample/dialog-sample.component';
 import { FormFieldSampleComponent } from './form-field-sample/form-field-sample.component';
 import { MenuSampleComponent } from './menu-sample/menu-sample.component';
+import { SelectSampleComponent } from './select-sample/select-sample.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { MenuSampleComponent } from './menu-sample/menu-sample.component';
     DialogSampleComponent,
     ConfirmDialogComponent,
     FormFieldSampleComponent,
-    MenuSampleComponent
+    MenuSampleComponent,
+    SelectSampleComponent
   ],
   imports: [
     AppRoutingModule,
@@ -42,6 +45,7 @@ import { MenuSampleComponent } from './menu-sample/menu-sample.component';
     MatFormFieldModule,
     MatInputModule,
     MatMenuModule,
+    MatSelectModule,
     MatToolbarModule,
   ],
   providers: [],

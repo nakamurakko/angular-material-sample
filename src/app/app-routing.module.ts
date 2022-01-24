@@ -6,6 +6,7 @@ import { CheckboxSampleComponent } from './checkbox-sample/checkbox-sample.compo
 import { DialogSampleComponent } from './dialog-sample/dialog-sample.component';
 import { FormFieldSampleComponent } from './form-field-sample/form-field-sample.component';
 import { MenuSampleComponent } from './menu-sample/menu-sample.component';
+import { SelectSampleComponent } from './select-sample/select-sample.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'dialog-sample', component: DialogSampleComponent },
   { path: 'form-field-sample', component: FormFieldSampleComponent },
   { path: 'menu-sample', component: MenuSampleComponent },
+  { path: 'select-sample', component: SelectSampleComponent },
 ];
 
 @NgModule({
