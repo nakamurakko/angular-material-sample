@@ -1,26 +1,25 @@
-<span class="mat-title">{{title}}</span>
-
 <mat-toolbar class="mat-primary">
-  <mat-toolbar-row>
-    <a href="https://material.angular.io/"
-       rel="noopener noreferrer"
-       target=”_blank”>Angular Material</a>
-  </mat-toolbar-row>
-
-  <mat-toolbar-row>
-    <button mat-raised-button
+  <button mat-icon-button
+          [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu"
+            xPosition="before">
+    <button mat-menu-item
             routerLink="/badge-sample">badge-sample</button>
-    <button mat-raised-button
+    <button mat-menu-item
             routerLink="/checkbox-sample">checkbox-sample</button>
-    <button mat-raised-button
+    <button mat-menu-item
             routerLink="/dialog-sample">dialog-sample</button>
-    <button mat-raised-button
+    <button mat-menu-item
             routerLink="/form-field-sample">form-field-sample</button>
-    <button mat-raised-button
+    <button mat-menu-item
             routerLink="/menu-sample">menu-sample</button>
-    <button mat-raised-button
+    <button mat-menu-item
             routerLink="/select-sample">select-sample</button>
-  </mat-toolbar-row>
+  </mat-menu>
+
+  <span>{{title}}</span>
 </mat-toolbar>
 
 <router-outlet></router-outlet>
