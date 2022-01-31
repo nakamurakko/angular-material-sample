@@ -8,6 +8,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
@@ -21,6 +22,7 @@ import { ConfirmDialogComponent } from './dialog-sample/confirm-dialog/confirm-d
 import { DialogSampleComponent } from './dialog-sample/dialog-sample.component';
 import { FormFieldSampleComponent } from './form-field-sample/form-field-sample.component';
 import { MenuSampleComponent } from './menu-sample/menu-sample.component';
+import { ProgressBarSampleComponent } from './progress-bar-sample/progress-bar-sample.component';
 import { SelectSampleComponent } from './select-sample/select-sample.component';
 
 @NgModule({
@@ -28,11 +30,12 @@ import { SelectSampleComponent } from './select-sample/select-sample.component';
     AppComponent,
     BadgeSampleComponent,
     CheckboxSampleComponent,
-    DialogSampleComponent,
     ConfirmDialogComponent,
+    DialogSampleComponent,
     FormFieldSampleComponent,
     MenuSampleComponent,
-    SelectSampleComponent
+    ProgressBarSampleComponent,
+    SelectSampleComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -47,6 +50,7 @@ import { SelectSampleComponent } from './select-sample/select-sample.component';
     MatIconModule,
     MatInputModule,
     MatMenuModule,
+    MatProgressBarModule,
     MatSelectModule,
     MatToolbarModule,
   ],
