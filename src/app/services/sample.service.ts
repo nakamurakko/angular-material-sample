@@ -16,6 +16,7 @@ export class SampleService {
    * 指定した秒数だけ遅延する。
    *
    * @param second 秒数
+   * @returns 指定秒数後に true を返す。
    */
   public delayBy(second: number): Observable<boolean> {
     return of<boolean>(true)
