@@ -1,3 +1,5 @@
+import { map, takeWhile } from 'rxjs';
+
 import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 
@@ -41,13 +43,12 @@ export class DialogSampleComponent implements OnInit {
 
     dialogRef.afterClosed()
       .subscribe(result => {
-        // 選択結果を表示する。
         if (result === undefined) {
-          this.dialogResult1 = '';
+          return;
         }
-        else {
-          this.dialogResult1 = result.toString() + ' : ' + DialogResult[result];
-        }
+
+        // 選択結果を表示する。
+        this.dialogResult1 = result.toString() + ' : ' + DialogResult[result];
       });
   }
 
@@ -61,14 +62,15 @@ export class DialogSampleComponent implements OnInit {
     // 確認ダイアログ(ConfirmDialogComponent)を表示する。
     this.dialog.open<ConfirmDialogComponent, string, DialogResult>(ConfirmDialogComponent, { data: '本日は晴天なり' })
       .afterClosed()
+      .pipe(
+        // DialogResult が返ってきた場合のみ処理を続行する。
+        takeWhile(x => x !== undefined),
+        // 「DialogResult | undefined」→「DialogResult」に置換。
+        map(x => x as DialogResult)
+      )
       .subscribe(result => {
         // 選択結果を表示する。
-        if (result === undefined) {
-          this.dialogResult2 = '';
-        }
-        else {
-          this.dialogResult2 = result.toString() + ' : ' + DialogResult[result];
-        }
+        this.dialogResult2 = result.toString() + ' : ' + DialogResult[result];
       });
   }
 
