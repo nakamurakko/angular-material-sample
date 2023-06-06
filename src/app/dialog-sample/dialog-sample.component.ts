@@ -60,7 +60,14 @@ export class DialogSampleComponent implements OnInit {
     this.dialogResult2 = '';
 
     // 確認ダイアログ(ConfirmDialogComponent)を表示する。
-    this.dialog.open<ConfirmDialogComponent, string, DialogResult>(ConfirmDialogComponent, { data: '本日は晴天なり' })
+    this.dialog.open<ConfirmDialogComponent, string, DialogResult>(
+      ConfirmDialogComponent,
+      {
+        height: ConfirmDialogComponent.DefaultDialogHeight,
+        width: ConfirmDialogComponent.DefaultDialogWidth,
+        data: '本日は晴天なり'
+      }
+    )
       .afterClosed()
       .pipe(
         // DialogResult が返ってきた場合のみ処理を続行する。

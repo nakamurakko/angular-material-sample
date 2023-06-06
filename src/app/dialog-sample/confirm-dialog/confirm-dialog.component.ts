@@ -13,6 +13,11 @@ import { DialogResult } from '../../data-types/dialog-result';
 })
 export class ConfirmDialogComponent implements OnInit {
 
+  /** デフォルトで使用する Height。 */
+  public static readonly DefaultDialogHeight: string = '200px';
+  /** デフォルトで使用する Width。 */
+  public static readonly DefaultDialogWidth: string = '400px';
+
   /** ダイアログメッセージ。 */
   public dialogMessage: string = '';
 
