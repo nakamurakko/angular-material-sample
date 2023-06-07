@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 
 import { DialogResult } from '../data-types/dialog-result';
-import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import { ConfirmDialogComponent, ConfirmDialogData } from './confirm-dialog/confirm-dialog.component';
 
 /**
  * Dialog サンプル。
@@ -39,7 +39,7 @@ export class DialogSampleComponent implements OnInit {
     this.dialogResult1 = '';
 
     // 確認ダイアログ(ConfirmDialogComponent)を表示する。
-    const dialogRef: MatDialogRef<ConfirmDialogComponent, DialogResult> = this.dialog.open(ConfirmDialogComponent, { data: '本日は晴天なり' });
+    const dialogRef: MatDialogRef<ConfirmDialogComponent, DialogResult> = this.dialog.open(ConfirmDialogComponent, { data: { dialogMessage: '本日は晴天なり' } });
 
     dialogRef.afterClosed()
       .subscribe(result => {
@@ -60,12 +60,14 @@ export class DialogSampleComponent implements OnInit {
     this.dialogResult2 = '';
 
     // 確認ダイアログ(ConfirmDialogComponent)を表示する。
-    this.dialog.open<ConfirmDialogComponent, string, DialogResult>(
+    this.dialog.open<ConfirmDialogComponent, ConfirmDialogData, DialogResult>(
       ConfirmDialogComponent,
       {
         height: ConfirmDialogComponent.DefaultDialogHeight,
         width: ConfirmDialogComponent.DefaultDialogWidth,
-        data: '本日は晴天なり'
+        data: {
+          dialogMessage: '本日は晴天なり'
+        }
       }
     )
       .afterClosed()

@@ -25,13 +25,17 @@ export class ConfirmDialogComponent implements OnInit {
    * コンストラクター。
    *
    * @param dialogRef MatDialogRef
-   * @param data ダイアログメッセージ。
+   * @param data ConfirmDialogData。
    */
-  public constructor(public dialogRef: MatDialogRef<ConfirmDialogComponent, DialogResult>, @Inject(MAT_DIALOG_DATA) public data: string) { }
+  public constructor(
+    public dialogRef: MatDialogRef<ConfirmDialogComponent, DialogResult>,
+    @Inject(MAT_DIALOG_DATA) public data: ConfirmDialogData
+  ) {
+  }
 
   public ngOnInit(): void {
     if (this.data != null) {
-      this.dialogMessage = this.data;
+      this.dialogMessage = this.data.dialogMessage;
     }
   }
 
@@ -49,4 +53,12 @@ export class ConfirmDialogComponent implements OnInit {
     this.dialogRef.close(DialogResult.Cancel);
   }
 
+}
+
+/**
+ * ConfirmDialogComponent.data 用インターフェイス。
+ */
+export interface ConfirmDialogData {
+  /** ダイアログメッセージ */
+  dialogMessage: string
 }
