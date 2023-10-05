@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+/**
+ * Checkbox サンプル。
+ */
 @Component({
   selector: 'app-checkbox-sample',
   templateUrl: './checkbox-sample.component.html',

@@ -1,8 +1,9 @@
-import { SampleService } from './../services/sample.service';
 import { Component, OnInit } from '@angular/core';
 
+import { SampleService } from '../services/sample.service';
+
 /**
- * プログレスバーサンプル。
+ * Progress bar サンプル。
  */
 @Component({
   selector: 'app-progress-bar-sample',

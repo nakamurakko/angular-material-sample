@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 /**
- * メニューサンプル。
+ * Menu サンプル。
  */
 @Component({
   selector: 'app-menu-sample',

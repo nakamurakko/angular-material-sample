@@ -21,6 +21,7 @@ import { CheckboxSampleComponent } from './checkbox-sample/checkbox-sample.compo
 import { ConfirmDialogComponent } from './dialog-sample/confirm-dialog/confirm-dialog.component';
 import { DialogSampleComponent } from './dialog-sample/dialog-sample.component';
 import { FormFieldSampleComponent } from './form-field-sample/form-field-sample.component';
+import { IconSampleComponent } from './icon-sample/icon-sample.component';
 import { MenuSampleComponent } from './menu-sample/menu-sample.component';
 import { ProgressBarSampleComponent } from './progress-bar-sample/progress-bar-sample.component';
 import { SelectSampleComponent } from './select-sample/select-sample.component';
@@ -33,6 +34,7 @@ import { SelectSampleComponent } from './select-sample/select-sample.component';
     ConfirmDialogComponent,
     DialogSampleComponent,
     FormFieldSampleComponent,
+    IconSampleComponent,
     MenuSampleComponent,
     ProgressBarSampleComponent,
     SelectSampleComponent,

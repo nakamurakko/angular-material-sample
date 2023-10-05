@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+/**
+ * Badge サンプル。
+ */
 @Component({
   selector: 'app-badge-sample',
   templateUrl: './badge-sample.component.html',
