@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { BadgeSampleComponent } from './badge-sample/badge-sample.component';
 import { CheckboxSampleComponent } from './checkbox-sample/checkbox-sample.component';
+import { ChipsSampleComponent } from './chips-sample/chips-sample.component';
 import { DialogSampleComponent } from './dialog-sample/dialog-sample.component';
 import { FormFieldSampleComponent } from './form-field-sample/form-field-sample.component';
 import { IconSampleComponent } from './icon-sample/icon-sample.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: 'badge-sample', component: BadgeSampleComponent },
   { path: 'checkbox-sample', component: CheckboxSampleComponent },
+  { path: 'chips-sample', component: ChipsSampleComponent },
   { path: 'dialog-sample', component: DialogSampleComponent },
   { path: 'form-field-sample', component: FormFieldSampleComponent },
   { path: 'icon-sample', component: IconSampleComponent },

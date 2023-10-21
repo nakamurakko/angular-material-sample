@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatChipsModule } from '@angular/material/chips';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
@@ -18,6 +19,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BadgeSampleComponent } from './badge-sample/badge-sample.component';
 import { CheckboxSampleComponent } from './checkbox-sample/checkbox-sample.component';
+import { ChipsSampleComponent } from './chips-sample/chips-sample.component';
 import { ConfirmDialogComponent } from './dialog-sample/confirm-dialog/confirm-dialog.component';
 import { DialogSampleComponent } from './dialog-sample/dialog-sample.component';
 import { FormFieldSampleComponent } from './form-field-sample/form-field-sample.component';
@@ -31,6 +33,7 @@ import { SelectSampleComponent } from './select-sample/select-sample.component';
     AppComponent,
     BadgeSampleComponent,
     CheckboxSampleComponent,
+    ChipsSampleComponent,
     ConfirmDialogComponent,
     DialogSampleComponent,
     FormFieldSampleComponent,
@@ -47,6 +50,7 @@ import { SelectSampleComponent } from './select-sample/select-sample.component';
     MatBadgeModule,
     MatButtonModule,
     MatCheckboxModule,
+    MatChipsModule,
     MatDialogModule,
     MatFormFieldModule,
     MatIconModule,

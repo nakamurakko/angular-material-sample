@@ -1,0 +1,42 @@
+<h2>chips-sample works!</h2>
+
+<div class="div-padding">
+  <label>mat-chip-set and mat-chip sample.</label>
+
+  <mat-chip-set>
+    <mat-chip *ngFor="let value of numbers">
+      {{value}}
+    </mat-chip>
+  </mat-chip-set>
+</div>
+
+<div class="div-padding">
+  <label>mat-chip-listbox and mat-chip-option sample.</label>
+
+  <mat-chip-listbox>
+    <mat-chip-option *ngFor="let value of numbers">
+      {{value}}
+    </mat-chip-option>
+  </mat-chip-listbox>
+</div>
+
+<div class="div-padding">
+  <label>mat-chip-grid and mat-chip-row sample.</label>
+
+  <div>
+    <mat-form-field class="form-field-width-stretch">
+      <mat-label>Numbers</mat-label>
+      <mat-chip-grid #matChipGrid>
+        <mat-chip-row *ngFor="let value of numbers">
+          {{value}}
+        </mat-chip-row>
+
+        <input placeholder="input number"
+               [matChipInputAddOnBlur]="true"
+               [matChipInputFor]="matChipGrid"
+               [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+               (matChipInputTokenEnd)="addNumer($event)" />
+      </mat-chip-grid>
+    </mat-form-field>
+  </div>
+</div>
