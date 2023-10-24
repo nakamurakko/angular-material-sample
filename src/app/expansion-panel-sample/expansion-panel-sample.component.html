@@ -1,0 +1,40 @@
+<h2>expansion-panel-sample works!</h2>
+
+<div class="div-padding">
+  <mat-accordion displayMode="flat">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <span>1</span>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <span>2</span>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+
+<div class="div-padding">
+  <button mat-raised-button
+          type="button"
+          (click)="openAll()">Open all</button>
+  <button mat-raised-button
+          type="button"
+          (click)="closeAll()">Close all</button>
+
+  <mat-accordion #sampleAccordion="matAccordion"
+                 multi="true">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <span>a</span>
+      </mat-expansion-panel-header>
+      <span>a is the first letter of the alphabet.</span>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <span>b</span>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>

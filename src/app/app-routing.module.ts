@@ -5,6 +5,7 @@ import { BadgeSampleComponent } from './badge-sample/badge-sample.component';
 import { CheckboxSampleComponent } from './checkbox-sample/checkbox-sample.component';
 import { ChipsSampleComponent } from './chips-sample/chips-sample.component';
 import { DialogSampleComponent } from './dialog-sample/dialog-sample.component';
+import { ExpansionPanelSampleComponent } from './expansion-panel-sample/expansion-panel-sample.component';
 import { FormFieldSampleComponent } from './form-field-sample/form-field-sample.component';
 import { IconSampleComponent } from './icon-sample/icon-sample.component';
 import { MenuSampleComponent } from './menu-sample/menu-sample.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'checkbox-sample', component: CheckboxSampleComponent },
   { path: 'chips-sample', component: ChipsSampleComponent },
   { path: 'dialog-sample', component: DialogSampleComponent },
+  { path: 'expansion-panel-sample', component: ExpansionPanelSampleComponent },
   { path: 'form-field-sample', component: FormFieldSampleComponent },
   { path: 'icon-sample', component: IconSampleComponent },
   { path: 'menu-sample', component: MenuSampleComponent },

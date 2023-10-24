@@ -5,6 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -22,6 +23,7 @@ import { CheckboxSampleComponent } from './checkbox-sample/checkbox-sample.compo
 import { ChipsSampleComponent } from './chips-sample/chips-sample.component';
 import { ConfirmDialogComponent } from './dialog-sample/confirm-dialog/confirm-dialog.component';
 import { DialogSampleComponent } from './dialog-sample/dialog-sample.component';
+import { ExpansionPanelSampleComponent } from './expansion-panel-sample/expansion-panel-sample.component';
 import { FormFieldSampleComponent } from './form-field-sample/form-field-sample.component';
 import { IconSampleComponent } from './icon-sample/icon-sample.component';
 import { MenuSampleComponent } from './menu-sample/menu-sample.component';
@@ -36,6 +38,7 @@ import { SelectSampleComponent } from './select-sample/select-sample.component';
     ChipsSampleComponent,
     ConfirmDialogComponent,
     DialogSampleComponent,
+    ExpansionPanelSampleComponent,
     FormFieldSampleComponent,
     IconSampleComponent,
     MenuSampleComponent,
@@ -52,6 +55,7 @@ import { SelectSampleComponent } from './select-sample/select-sample.component';
     MatCheckboxModule,
     MatChipsModule,
     MatDialogModule,
+    MatExpansionModule,
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
