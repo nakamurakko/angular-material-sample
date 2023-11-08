@@ -1,0 +1,9 @@
+.dialog-frame {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.dialog-content {
+  margin-bottom: auto;
+}
