@@ -7,7 +7,7 @@
       <mat-label>ランクを選択</mat-label>
       <mat-select (selectionChange)="onSelectionChange($event)">
         <mat-option *ngFor="let rank of ranks"
-                    value={{rank.id}}>{{rank.value}}</mat-option>
+                    [value]="rank">{{rank.value}}</mat-option>
       </mat-select>
     </mat-form-field>
     <mat-form-field>

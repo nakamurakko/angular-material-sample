@@ -32,7 +32,7 @@ export class SelectSampleComponent implements OnInit {
    * @param e イベントデータ。
    */
   public onSelectionChange(e: MatSelectChange): void {
-    this.selectedValue = e.value as string;
+    this.selectedValue = (e.value as Rank).value;
   }
 
 }
