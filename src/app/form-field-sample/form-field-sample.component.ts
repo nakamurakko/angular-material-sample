@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 /**
  * Form field サンプル。
@@ -8,12 +8,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './form-field-sample.component.html',
   styleUrls: ['./form-field-sample.component.css']
 })
-export class FormFieldSampleComponent implements OnInit {
+export class FormFieldSampleComponent {
 
   public inputValue: string = 'input';
   public textAreaValue: string = 'textArea';
-
-  public ngOnInit(): void {
-  }
 
 }

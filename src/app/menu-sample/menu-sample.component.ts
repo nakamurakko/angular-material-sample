@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 /**
  * Menu サンプル。
@@ -8,12 +8,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './menu-sample.component.html',
   styleUrls: ['./menu-sample.component.css']
 })
-export class MenuSampleComponent implements OnInit {
+export class MenuSampleComponent {
 
   public selectedValue: string = '';
-
-  public ngOnInit(): void {
-  }
 
   /**
    * クリック処理。

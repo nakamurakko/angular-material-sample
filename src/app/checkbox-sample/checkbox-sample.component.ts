@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 /**
  * Checkbox サンプル。
@@ -8,12 +8,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './checkbox-sample.component.html',
   styleUrls: ['./checkbox-sample.component.css']
 })
-export class CheckboxSampleComponent implements OnInit {
+export class CheckboxSampleComponent {
 
   /** チェックボックスの選択値 */
   public isSunny: boolean = true;
-
-  public ngOnInit(): void {
-  }
 
 }

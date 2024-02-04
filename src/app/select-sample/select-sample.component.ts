@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatSelectChange } from '@angular/material/select';
 
 import { Rank } from '../data-types/rank';
@@ -11,7 +11,7 @@ import { Rank } from '../data-types/rank';
   templateUrl: './select-sample.component.html',
   styleUrls: ['./select-sample.component.css']
 })
-export class SelectSampleComponent implements OnInit {
+export class SelectSampleComponent {
 
   /** 選択値。 */
   public selectedValue: string = '';
@@ -22,9 +22,6 @@ export class SelectSampleComponent implements OnInit {
     { id: 1, value: '竹' },
     { id: 2, value: '梅' },
   );
-
-  public ngOnInit(): void {
-  }
 
   /**
    * 選択値変更処理。

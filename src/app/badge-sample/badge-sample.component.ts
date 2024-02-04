@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 /**
  * Badge サンプル。
@@ -8,11 +8,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './badge-sample.component.html',
   styleUrls: ['./badge-sample.component.css']
 })
-export class BadgeSampleComponent implements OnInit {
+export class BadgeSampleComponent {
   public clickCount: number = 0;
-
-  public ngOnInit(): void {
-  }
 
   /**
    * ボタンをクリックしたらカウントアップする。

@@ -1,6 +1,6 @@
 import { map, takeWhile } from 'rxjs';
 
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 
 import { DialogResult } from '../data-types/dialog-result';
@@ -14,7 +14,7 @@ import { ConfirmDialogComponent, ConfirmDialogData } from './confirm-dialog/conf
   templateUrl: './dialog-sample.component.html',
   styleUrls: ['./dialog-sample.component.css']
 })
-export class DialogSampleComponent implements OnInit {
+export class DialogSampleComponent {
 
   /** ダイアログメッセージの結果1 */
   public dialogResult1: string = '';
@@ -28,9 +28,6 @@ export class DialogSampleComponent implements OnInit {
    * @param dialog MatDialog
    */
   public constructor(public dialog: MatDialog) { }
-
-  public ngOnInit(): void {
-  }
 
   /**
    * ダイアログ呼び出し。

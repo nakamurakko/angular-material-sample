@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { SampleService } from '../services/sample.service';
 
@@ -10,7 +10,7 @@ import { SampleService } from '../services/sample.service';
   templateUrl: './progress-bar-sample.component.html',
   styleUrls: ['./progress-bar-sample.component.css']
 })
-export class ProgressBarSampleComponent implements OnInit {
+export class ProgressBarSampleComponent {
 
   /** 処理中かどうか。 */
   public isProcessing: boolean = false;
@@ -24,9 +24,6 @@ export class ProgressBarSampleComponent implements OnInit {
    * @param sampleService サンプルサービス。
    */
   public constructor(private sampleService: SampleService) {
-  }
-
-  public ngOnInit(): void {
   }
 
   /**

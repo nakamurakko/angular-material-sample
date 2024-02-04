@@ -19,7 +19,7 @@ export class SampleService {
    * @returns 指定秒数後に true を返す。
    */
   public delayBy(second: number): Observable<boolean> {
-    return of<boolean>(true)
+    return of(true)
       .pipe(
         delay(second * 1000)
       );
