@@ -1,5 +1,4 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 
 import { BadgeSampleComponent } from './badge-sample/badge-sample.component';
 import { CheckboxSampleComponent } from './checkbox-sample/checkbox-sample.component';
@@ -12,8 +11,7 @@ import { MenuSampleComponent } from './menu-sample/menu-sample.component';
 import { ProgressBarSampleComponent } from './progress-bar-sample/progress-bar-sample.component';
 import { SelectSampleComponent } from './select-sample/select-sample.component';
 
-const routes: Routes = [
-  { path: '', redirectTo: '/', pathMatch: 'full' },
+export const routes: Routes = [
   { path: 'badge-sample', component: BadgeSampleComponent },
   { path: 'checkbox-sample', component: CheckboxSampleComponent },
   { path: 'chips-sample', component: ChipsSampleComponent },
@@ -23,11 +21,5 @@ const routes: Routes = [
   { path: 'icon-sample', component: IconSampleComponent },
   { path: 'menu-sample', component: MenuSampleComponent },
   { path: 'progress-bar-sample', component: ProgressBarSampleComponent },
-  { path: 'select-sample', component: SelectSampleComponent },
+  { path: 'select-sample', component: SelectSampleComponent }
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }

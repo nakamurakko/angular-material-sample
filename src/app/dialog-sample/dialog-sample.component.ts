@@ -1,7 +1,11 @@
 import { map, takeWhile } from 'rxjs';
 
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 import { DialogResult } from '../data-types/dialog-result';
 import { ConfirmDialogComponent, ConfirmDialogData } from './confirm-dialog/confirm-dialog.component';
@@ -11,8 +15,15 @@ import { ConfirmDialogComponent, ConfirmDialogData } from './confirm-dialog/conf
  */
 @Component({
   selector: 'app-dialog-sample',
+  standalone: true,
+  imports: [
+    FormsModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule
+  ],
   templateUrl: './dialog-sample.component.html',
-  styleUrls: ['./dialog-sample.component.css']
+  styleUrl: './dialog-sample.component.css'
 })
 export class DialogSampleComponent {
 

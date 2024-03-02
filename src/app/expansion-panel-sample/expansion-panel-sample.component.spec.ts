@@ -6,10 +6,12 @@ describe('ExpansionPanelSampleComponent', () => {
   let component: ExpansionPanelSampleComponent;
   let fixture: ComponentFixture<ExpansionPanelSampleComponent>;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [ExpansionPanelSampleComponent]
-    });
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [ExpansionPanelSampleComponent]
+    })
+      .compileComponents();
+
     fixture = TestBed.createComponent(ExpansionPanelSampleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

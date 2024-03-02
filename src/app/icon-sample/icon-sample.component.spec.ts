@@ -6,10 +6,12 @@ describe('IconSampleComponent', () => {
   let component: IconSampleComponent;
   let fixture: ComponentFixture<IconSampleComponent>;
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [IconSampleComponent]
-    });
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [IconSampleComponent]
+    })
+      .compileComponents();
+
     fixture = TestBed.createComponent(IconSampleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

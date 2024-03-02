@@ -8,12 +8,10 @@ describe('SelectSampleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SelectSampleComponent ]
+      imports: [SelectSampleComponent]
     })
-    .compileComponents();
-  });
+      .compileComponents();
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(SelectSampleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

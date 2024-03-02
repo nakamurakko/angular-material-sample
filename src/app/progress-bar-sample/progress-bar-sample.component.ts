@@ -1,4 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 import { SampleService } from '../services/sample.service';
 
@@ -7,11 +13,19 @@ import { SampleService } from '../services/sample.service';
  */
 @Component({
   selector: 'app-progress-bar-sample',
+  standalone: true,
+  imports: [
+    CommonModule,
+    FormsModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatProgressBarModule
+  ],
   templateUrl: './progress-bar-sample.component.html',
-  styleUrls: ['./progress-bar-sample.component.css']
+  styleUrl: './progress-bar-sample.component.css'
 })
 export class ProgressBarSampleComponent {
-
   /** 処理中かどうか。 */
   public isProcessing: boolean = false;
 

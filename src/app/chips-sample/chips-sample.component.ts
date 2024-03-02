@@ -1,16 +1,25 @@
 import { ENTER } from '@angular/cdk/keycodes';
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { MatChipInputEvent } from '@angular/material/chips';
+import { MatChipInputEvent, MatChipsModule } from '@angular/material/chips';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 /**
  * Chips サンプル。
  */
 @Component({
   selector: 'app-chips-sample',
+  standalone: true,
+  imports: [
+    CommonModule,
+    MatChipsModule,
+    MatFormFieldModule
+  ],
   templateUrl: './chips-sample.component.html',
-  styleUrls: ['./chips-sample.component.css']
+  styleUrl: './chips-sample.component.css'
 })
 export class ChipsSampleComponent {
+
   public numbers: Array<string> = ['one', 'two', 'three'];
 
   public readonly separatorKeysCodes: Array<number> = [ENTER];
@@ -28,4 +37,5 @@ export class ChipsSampleComponent {
     this.numbers.push(event.value);
     event.chipInput?.clear();
   }
+
 }

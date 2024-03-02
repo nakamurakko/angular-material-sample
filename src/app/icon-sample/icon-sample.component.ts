@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 
 /**
  * Icon サンプル。
@@ -7,8 +8,12 @@ import { Component } from '@angular/core';
  */
 @Component({
   selector: 'app-icon-sample',
+  standalone: true,
+  imports: [
+    MatIconModule
+  ],
   templateUrl: './icon-sample.component.html',
-  styleUrls: ['./icon-sample.component.css']
+  styleUrl: './icon-sample.component.css'
 })
 export class IconSampleComponent {
 

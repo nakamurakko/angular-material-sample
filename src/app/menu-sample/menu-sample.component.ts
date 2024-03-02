@@ -1,12 +1,25 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
 
 /**
  * Menu サンプル。
  */
 @Component({
   selector: 'app-menu-sample',
+  standalone: true,
+  imports: [
+    FormsModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatMenuModule
+  ],
   templateUrl: './menu-sample.component.html',
-  styleUrls: ['./menu-sample.component.css']
+  styleUrl: './menu-sample.component.css'
 })
 export class MenuSampleComponent {
 
@@ -21,4 +34,5 @@ export class MenuSampleComponent {
   public onClick(e: MouseEvent, value: string): void {
     this.selectedValue = value + ' をクリック';
   }
+
 }

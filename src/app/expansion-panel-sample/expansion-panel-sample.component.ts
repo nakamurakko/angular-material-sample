@@ -1,13 +1,19 @@
 import { Component, ViewChild } from '@angular/core';
-import { MatAccordion } from '@angular/material/expansion';
+import { MatButtonModule } from '@angular/material/button';
+import { MatAccordion, MatExpansionModule } from '@angular/material/expansion';
 
 /**
  * Expansion Panel サンプル。
  */
 @Component({
   selector: 'app-expansion-panel-sample',
+  standalone: true,
+  imports: [
+    MatButtonModule,
+    MatExpansionModule
+  ],
   templateUrl: './expansion-panel-sample.component.html',
-  styleUrls: ['./expansion-panel-sample.component.css']
+  styleUrl: './expansion-panel-sample.component.css'
 })
 export class ExpansionPanelSampleComponent {
 

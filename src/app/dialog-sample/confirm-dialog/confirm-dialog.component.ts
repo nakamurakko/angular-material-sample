@@ -1,5 +1,6 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { Component, Inject } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 
 import { DialogResult } from '../../data-types/dialog-result';
 
@@ -8,10 +9,15 @@ import { DialogResult } from '../../data-types/dialog-result';
  */
 @Component({
   selector: 'app-confirm-dialog',
+  standalone: true,
+  imports: [
+    MatButtonModule,
+    MatDialogModule
+  ],
   templateUrl: './confirm-dialog.component.html',
-  styleUrls: ['./confirm-dialog.component.css']
+  styleUrl: './confirm-dialog.component.css'
 })
-export class ConfirmDialogComponent implements OnInit {
+export class ConfirmDialogComponent {
 
   /** デフォルトで使用する Height。 */
   public static readonly DefaultDialogHeight: string = '200px';
@@ -59,6 +65,8 @@ export class ConfirmDialogComponent implements OnInit {
  * ConfirmDialogComponent.data 用インターフェイス。
  */
 export interface ConfirmDialogData {
+
   /** ダイアログメッセージ */
   dialogMessage: string
+
 }

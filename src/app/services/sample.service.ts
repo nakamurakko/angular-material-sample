@@ -24,4 +24,5 @@ export class SampleService {
         delay(second * 1000)
       );
   }
+
 }

@@ -1,5 +1,9 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { MatSelectChange } from '@angular/material/select';
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectChange, MatSelectModule } from '@angular/material/select';
 
 import { Rank } from '../data-types/rank';
 
@@ -8,8 +12,16 @@ import { Rank } from '../data-types/rank';
  */
 @Component({
   selector: 'app-select-sample',
+  standalone: true,
+  imports: [
+    CommonModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule
+  ],
   templateUrl: './select-sample.component.html',
-  styleUrls: ['./select-sample.component.css']
+  styleUrl: './select-sample.component.css'
 })
 export class SelectSampleComponent {
 

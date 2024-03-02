@@ -8,12 +8,10 @@ describe('BadgeSampleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BadgeSampleComponent ]
+      imports: [BadgeSampleComponent]
     })
-    .compileComponents();
-  });
+      .compileComponents();
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(BadgeSampleComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
