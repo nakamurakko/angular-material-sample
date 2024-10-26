@@ -1,6 +1,6 @@
 import { map, takeWhile } from 'rxjs';
 
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
@@ -33,12 +33,13 @@ export class DialogSampleComponent {
   /** ダイアログメッセージの結果2 */
   public dialogResult2: string = '';
 
+  public readonly dialog = inject(MatDialog);
   /**
    * コンストラクター。
    *
    * @param dialog MatDialog
    */
-  public constructor(public dialog: MatDialog) { }
+  public constructor() { }
 
   /**
    * ダイアログ呼び出し。
