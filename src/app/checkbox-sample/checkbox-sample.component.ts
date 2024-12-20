@@ -9,7 +9,6 @@ import { MatInputModule } from '@angular/material/input';
  */
 @Component({
   selector: 'app-checkbox-sample',
-  standalone: true,
   imports: [
     FormsModule,
     MatCheckboxModule,

@@ -9,7 +9,6 @@ import { MetalSelectionSheetComponent } from './metal-selection-sheet/metal-sele
  */
 @Component({
   selector: 'app-bottom-sheet-sample',
-  standalone: true,
   imports: [
     MatBottomSheetModule,
     MatButtonModule

@@ -10,7 +10,6 @@ import { MatMenuModule } from '@angular/material/menu';
  */
 @Component({
   selector: 'app-menu-sample',
-  standalone: true,
   imports: [
     FormsModule,
     MatButtonModule,

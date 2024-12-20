@@ -7,7 +7,6 @@ import { MatAccordion, MatExpansionModule } from '@angular/material/expansion';
  */
 @Component({
   selector: 'app-expansion-panel-sample',
-  standalone: true,
   imports: [
     MatButtonModule,
     MatExpansionModule

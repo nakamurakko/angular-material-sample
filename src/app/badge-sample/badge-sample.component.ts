@@ -7,7 +7,6 @@ import { MatButtonModule } from '@angular/material/button';
  */
 @Component({
   selector: 'app-badge-sample',
-  standalone: true,
   imports: [
     MatBadgeModule,
     MatButtonModule

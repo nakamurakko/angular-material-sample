@@ -12,7 +12,6 @@ import { Rank } from '../data-types/rank';
  */
 @Component({
   selector: 'app-select-sample',
-  standalone: true,
   imports: [
     CommonModule,
     FormsModule,

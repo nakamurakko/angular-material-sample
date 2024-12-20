@@ -8,7 +8,6 @@ import { MatIconModule } from '@angular/material/icon';
  */
 @Component({
   selector: 'app-icon-sample',
-  standalone: true,
   imports: [
     MatIconModule
   ],

@@ -7,7 +7,6 @@ import { MatListModule } from '@angular/material/list';
  */
 @Component({
   selector: 'app-metal-selection-sheet',
-  standalone: true,
   imports: [
     MatListModule
   ],

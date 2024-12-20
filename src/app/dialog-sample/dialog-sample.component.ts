@@ -15,7 +15,6 @@ import { ConfirmDialogComponent, ConfirmDialogData } from './confirm-dialog/conf
  */
 @Component({
   selector: 'app-dialog-sample',
-  standalone: true,
   imports: [
     FormsModule,
     MatButtonModule,

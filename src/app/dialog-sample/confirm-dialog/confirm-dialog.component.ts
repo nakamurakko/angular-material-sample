@@ -9,7 +9,6 @@ import { DialogResult } from '../../data-types/dialog-result';
  */
 @Component({
   selector: 'app-confirm-dialog',
-  standalone: true,
   imports: [
     MatButtonModule,
     MatDialogModule
