@@ -1,5 +1,4 @@
 import { ENTER } from '@angular/cdk/keycodes';
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatChipInputEvent, MatChipsModule } from '@angular/material/chips';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -10,7 +9,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 @Component({
   selector: 'app-chips-sample',
   imports: [
-    CommonModule,
     MatChipsModule,
     MatFormFieldModule
   ],

@@ -4,9 +4,9 @@
   <label>mat-chip-set and mat-chip sample.</label>
 
   <mat-chip-set>
-    <mat-chip *ngFor="let value of numbers">
-      {{value}}
-    </mat-chip>
+    @for (value of numbers; track value) {
+    <mat-chip>{{value}}</mat-chip>
+    }
   </mat-chip-set>
 </div>
 
@@ -14,9 +14,9 @@
   <label>mat-chip-listbox and mat-chip-option sample.</label>
 
   <mat-chip-listbox>
-    <mat-chip-option *ngFor="let value of numbers">
-      {{value}}
-    </mat-chip-option>
+    @for (value of numbers; track value) {
+    <mat-chip-option>{{value}}</mat-chip-option>
+    }
   </mat-chip-listbox>
 </div>
 
@@ -27,9 +27,9 @@
     <mat-form-field class="form-field-width-stretch">
       <mat-label>Numbers</mat-label>
       <mat-chip-grid #matChipGrid>
-        <mat-chip-row *ngFor="let value of numbers">
-          {{value}}
-        </mat-chip-row>
+        @for (value of numbers; track value) {
+        <mat-chip-row>{{value}}</mat-chip-row>
+        }
 
         <input placeholder="input number"
                [matChipInputAddOnBlur]="true"
