@@ -1,5 +1,5 @@
 import { ENTER } from '@angular/cdk/keycodes';
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { MatChipInputEvent, MatChipsModule } from '@angular/material/chips';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
@@ -13,13 +13,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatFormFieldModule
   ],
   templateUrl: './chips-sample.component.html',
-  styleUrl: './chips-sample.component.css'
+  styleUrl: './chips-sample.component.css',
 })
 export class ChipsSampleComponent {
 
-  public numbers: Array<string> = ['one', 'two', 'three'];
+  public numbers = signal<string[]>(['one', 'two', 'three']);
 
-  public readonly separatorKeysCodes: Array<number> = [ENTER];
+  public readonly separatorKeysCodes: number[] = [ENTER] as const;
 
   /**
    * 数字を追加する。
@@ -31,7 +31,7 @@ export class ChipsSampleComponent {
       return;
     }
 
-    this.numbers.push(event.value);
+    this.numbers.update(value => [...value, event.value]);
     event.chipInput?.clear();
   }
 

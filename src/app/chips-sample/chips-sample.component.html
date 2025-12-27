@@ -1,33 +1,33 @@
 <h2>chips-sample works!</h2>
 
 <div class="div-padding">
-  <label>mat-chip-set and mat-chip sample.</label>
+  <span>mat-chip-set and mat-chip sample.</span>
 
   <mat-chip-set>
-    @for (value of numbers; track value) {
+    @for (value of numbers(); track value) {
     <mat-chip>{{value}}</mat-chip>
     }
   </mat-chip-set>
 </div>
 
 <div class="div-padding">
-  <label>mat-chip-listbox and mat-chip-option sample.</label>
+  <span>mat-chip-listbox and mat-chip-option sample.</span>
 
   <mat-chip-listbox>
-    @for (value of numbers; track value) {
+    @for (value of numbers(); track value) {
     <mat-chip-option>{{value}}</mat-chip-option>
     }
   </mat-chip-listbox>
 </div>
 
 <div class="div-padding">
-  <label>mat-chip-grid and mat-chip-row sample.</label>
+  <span>mat-chip-grid and mat-chip-row sample.</span>
 
   <div>
     <mat-form-field class="form-field-width-stretch">
       <mat-label>Numbers</mat-label>
       <mat-chip-grid #matChipGrid>
-        @for (value of numbers; track value) {
+        @for (value of numbers(); track value) {
         <mat-chip-row>{{value}}</mat-chip-row>
         }
 

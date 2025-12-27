@@ -10,11 +10,11 @@ describe('MetalSelectionSheetComponent', () => {
     await TestBed.configureTestingModule({
       imports: [MetalSelectionSheetComponent]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(MetalSelectionSheetComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    await fixture.whenStable();
   });
 
   it('should create', () => {

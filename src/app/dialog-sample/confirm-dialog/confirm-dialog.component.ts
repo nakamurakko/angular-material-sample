@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 
@@ -14,33 +14,25 @@ import { DialogResult } from '../../data-types/dialog-result';
     MatDialogModule
   ],
   templateUrl: './confirm-dialog.component.html',
-  styleUrl: './confirm-dialog.component.css'
+  styleUrl: './confirm-dialog.component.css',
 })
-export class ConfirmDialogComponent {
+export class ConfirmDialogComponent implements OnInit {
 
   /** デフォルトで使用する Height。 */
   public static readonly DefaultDialogHeight: string = '200px';
   /** デフォルトで使用する Width。 */
   public static readonly DefaultDialogWidth: string = '400px';
 
-  /** ダイアログメッセージ。 */
-  public dialogMessage: string = '';
+  public readonly dialogRef = inject(MatDialogRef<ConfirmDialogComponent, DialogResult>);
 
-  /**
-   * コンストラクター。
-   *
-   * @param dialogRef MatDialogRef
-   * @param data ConfirmDialogData。
-   */
-  public constructor(
-    public dialogRef: MatDialogRef<ConfirmDialogComponent, DialogResult>,
-    @Inject(MAT_DIALOG_DATA) public data: ConfirmDialogData
-  ) {
-  }
+  public readonly data = inject<ConfirmDialogData>(MAT_DIALOG_DATA);
+
+  /** ダイアログメッセージ。 */
+  public dialogMessage = signal<string>('');
 
   public ngOnInit(): void {
-    if (this.data != null) {
-      this.dialogMessage = this.data.dialogMessage;
+    if (this.data?.dialogMessage) {
+      this.dialogMessage.set(this.data.dialogMessage);
     }
   }
 

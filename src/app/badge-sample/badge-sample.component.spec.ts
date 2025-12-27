@@ -14,7 +14,7 @@ describe('BadgeSampleComponent', () => {
 
     fixture = TestBed.createComponent(BadgeSampleComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    await fixture.whenStable();
   });
 
   it('should create', () => {

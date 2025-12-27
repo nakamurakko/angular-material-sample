@@ -1,6 +1,6 @@
 import { map, takeWhile } from 'rxjs';
 
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
@@ -22,29 +22,23 @@ import { ConfirmDialogComponent, ConfirmDialogData } from './confirm-dialog/conf
     MatInputModule
   ],
   templateUrl: './dialog-sample.component.html',
-  styleUrl: './dialog-sample.component.css'
+  styleUrl: './dialog-sample.component.css',
 })
 export class DialogSampleComponent {
 
   /** ダイアログメッセージの結果1 */
-  public dialogResult1: string = '';
+  public dialogResult1 = signal<string>('');
 
   /** ダイアログメッセージの結果2 */
-  public dialogResult2: string = '';
+  public dialogResult2 = signal<string>('');
 
   public readonly dialog = inject(MatDialog);
-  /**
-   * コンストラクター。
-   *
-   * @param dialog MatDialog
-   */
-  public constructor() { }
 
   /**
    * ダイアログ呼び出し。
    */
   public onOpenDialog1(): void {
-    this.dialogResult1 = '';
+    this.dialogResult1.set('');
 
     // 確認ダイアログ(ConfirmDialogComponent)を表示する。
     const dialogRef: MatDialogRef<ConfirmDialogComponent, DialogResult> = this.dialog.open(ConfirmDialogComponent, { data: { dialogMessage: '本日は晴天なり' } });
@@ -56,7 +50,7 @@ export class DialogSampleComponent {
         }
 
         // 選択結果を表示する。
-        this.dialogResult1 = result.toString() + ' : ' + DialogResult[result];
+        this.dialogResult1.set(result.toString() + ' : ' + DialogResult[result]);
       });
   }
 
@@ -65,7 +59,7 @@ export class DialogSampleComponent {
    * MatDialogRef 変数を宣言しないで書く場合。
    */
   public onOpenDialog2(): void {
-    this.dialogResult2 = '';
+    this.dialogResult2.set('');
 
     // 確認ダイアログ(ConfirmDialogComponent)を表示する。
     this.dialog.open<ConfirmDialogComponent, ConfirmDialogData, DialogResult>(
@@ -87,7 +81,7 @@ export class DialogSampleComponent {
       )
       .subscribe(result => {
         // 選択結果を表示する。
-        this.dialogResult2 = result.toString() + ' : ' + DialogResult[result];
+        this.dialogResult2.set(result.toString() + ' : ' + DialogResult[result]);
       });
   }
 

@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatCheckboxChange, MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
@@ -16,11 +16,18 @@ import { MatInputModule } from '@angular/material/input';
     MatInputModule
   ],
   templateUrl: './checkbox-sample.component.html',
-  styleUrl: './checkbox-sample.component.css'
+  styleUrl: './checkbox-sample.component.css',
 })
 export class CheckboxSampleComponent {
 
   /** チェックボックスの選択値 */
-  public isSunny: boolean = true;
+  public isSunny = signal<boolean>(true);
+
+  /**
+   * onChange
+   */
+  public onChange(event: MatCheckboxChange): void {
+    this.isSunny.set(event.checked);
+  }
 
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { MatBottomSheet, MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { MatButtonModule } from '@angular/material/button';
 
@@ -14,22 +14,14 @@ import { MetalSelectionSheetComponent } from './metal-selection-sheet/metal-sele
     MatButtonModule
   ],
   templateUrl: './bottom-sheet-sample.component.html',
-  styleUrl: './bottom-sheet-sample.component.css'
+  styleUrl: './bottom-sheet-sample.component.css',
 })
 export class BottomSheetSampleComponent {
 
-  /** 選択した金属名。 */
-  public selectedMetalName: string = '';
+  private bottomSheet = inject(MatBottomSheet);
 
-  /**
-   * コンストラクター。
-   *
-   * @param bottomSheet
-   */
-  public constructor(
-    private bottomSheet: MatBottomSheet
-  ) {
-  }
+  /** 選択した金属名。 */
+  public selectedMetalName = signal<string>('');
 
   /**
    * 金属選択シートを開く。
@@ -38,7 +30,7 @@ export class BottomSheetSampleComponent {
     this.bottomSheet.open(MetalSelectionSheetComponent)
       .afterDismissed()
       .subscribe((value: string) => {
-        this.selectedMetalName = value;
+        this.selectedMetalName.set(value);
       });
   }
 

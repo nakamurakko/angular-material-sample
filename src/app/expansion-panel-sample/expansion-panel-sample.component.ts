@@ -12,7 +12,7 @@ import { MatAccordion, MatExpansionModule } from '@angular/material/expansion';
     MatExpansionModule
   ],
   templateUrl: './expansion-panel-sample.component.html',
-  styleUrl: './expansion-panel-sample.component.css'
+  styleUrl: './expansion-panel-sample.component.css',
 })
 export class ExpansionPanelSampleComponent {
 

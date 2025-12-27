@@ -2,9 +2,9 @@
 
 <div>
 
-  <button mat-raised-button
-          [matBadge]="clickCount"
-          [matBadgeHidden]="clickCount === 0"
+  <button matButton="elevated"
+          [matBadge]="clickCount()"
+          [matBadgeHidden]="clickCount() === 0"
           (click)="onClick()">押す</button>
 
 </div>

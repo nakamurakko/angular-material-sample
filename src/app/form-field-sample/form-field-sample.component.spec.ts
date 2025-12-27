@@ -14,7 +14,7 @@ describe('FormFieldSampleComponent', () => {
 
     fixture = TestBed.createComponent(FormFieldSampleComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    await fixture.whenStable();
   });
 
   it('should create', () => {

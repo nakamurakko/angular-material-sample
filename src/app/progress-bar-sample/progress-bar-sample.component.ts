@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -20,31 +20,26 @@ import { SampleService } from '../services/sample.service';
     MatProgressBarModule
   ],
   templateUrl: './progress-bar-sample.component.html',
-  styleUrl: './progress-bar-sample.component.css'
+  styleUrl: './progress-bar-sample.component.css',
 })
 export class ProgressBarSampleComponent {
+
+  private sampleService = inject(SampleService);
+
   /** 処理中かどうか。 */
-  public isProcessing: boolean = false;
+  public isProcessing = signal<boolean>(false);
 
   /** 遅延させる秒数。 */
   public delaySecond: number = 5;
 
   /**
-   * コンストラクター。
-   *
-   * @param sampleService サンプルサービス。
-   */
-  public constructor(private sampleService: SampleService) {
-  }
-
-  /**
    * onClick
    */
   public onClick(): void {
-    this.isProcessing = true;
+    this.isProcessing.set(true);
     this.sampleService.delayBy(this.delaySecond)
       .subscribe(() => {
-        this.isProcessing = false;
+        this.isProcessing.set(false);
       });
   }
 

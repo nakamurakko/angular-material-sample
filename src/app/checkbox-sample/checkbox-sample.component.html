@@ -1,14 +1,13 @@
 <h2>checkbox-sample works!</h2>
 
 <div>
-
-  <mat-checkbox [(ngModel)]="isSunny">本日は晴天なり</mat-checkbox>
+  <mat-checkbox [checked]="isSunny()"
+                (change)="onChange($event)">本日は晴天なり</mat-checkbox>
   <mat-form-field>
     <mat-label>選択値</mat-label>
     <input matInput
-           disabled="true"
            placeholder="選択値"
-           [ngModel]="isSunny" />
+           readonly
+           [ngModel]="isSunny()" />
   </mat-form-field>
-
 </div>

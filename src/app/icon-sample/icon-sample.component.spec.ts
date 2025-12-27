@@ -14,7 +14,7 @@ describe('IconSampleComponent', () => {
 
     fixture = TestBed.createComponent(IconSampleComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    await fixture.whenStable();
   });
 
   it('should create', () => {

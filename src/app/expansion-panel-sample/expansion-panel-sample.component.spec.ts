@@ -14,7 +14,7 @@ describe('ExpansionPanelSampleComponent', () => {
 
     fixture = TestBed.createComponent(ExpansionPanelSampleComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    await fixture.whenStable();
   });
 
   it('should create', () => {

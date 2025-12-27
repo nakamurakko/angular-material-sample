@@ -14,7 +14,7 @@ describe('SelectSampleComponent', () => {
 
     fixture = TestBed.createComponent(SelectSampleComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    await fixture.whenStable();
   });
 
   it('should create', () => {

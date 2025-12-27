@@ -6,11 +6,9 @@ import { Injectable } from '@angular/core';
  * サンプルサービス。
  */
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SampleService {
-
-  public constructor() { }
 
   /**
    * 指定した秒数だけ遅延する。

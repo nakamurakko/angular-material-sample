@@ -3,7 +3,7 @@
 <div>
 
   <div>
-    <button mat-raised-button
+    <button matButton="elevated"
             [matMenuTriggerFor]="menu">メニュー</button>
     <mat-menu #menu="matMenu"
               xPosition="before">
@@ -19,7 +19,8 @@
       <mat-label>選択値</mat-label>
       <input matInput
              placeholder="選択値"
-             [(ngModel)]="selectedValue" />
+             readonly
+             [value]="selectedValue()" />
     </mat-form-field>
   </div>
 

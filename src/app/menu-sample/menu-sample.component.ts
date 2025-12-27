@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -18,11 +18,11 @@ import { MatMenuModule } from '@angular/material/menu';
     MatMenuModule
   ],
   templateUrl: './menu-sample.component.html',
-  styleUrl: './menu-sample.component.css'
+  styleUrl: './menu-sample.component.css',
 })
 export class MenuSampleComponent {
 
-  public selectedValue: string = '';
+  public selectedValue = signal<string>('');
 
   /**
    * クリック処理。
@@ -31,7 +31,7 @@ export class MenuSampleComponent {
    * @param value クリックしたボタンを認識する値。
    */
   public onClick(e: MouseEvent, value: string): void {
-    this.selectedValue = value + ' をクリック';
+    this.selectedValue.set(value + ' をクリック');
   }
 
 }

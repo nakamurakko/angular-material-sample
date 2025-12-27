@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
 
@@ -12,17 +12,17 @@ import { MatButtonModule } from '@angular/material/button';
     MatButtonModule
   ],
   templateUrl: './badge-sample.component.html',
-  styleUrl: './badge-sample.component.css'
+  styleUrl: './badge-sample.component.css',
 })
 export class BadgeSampleComponent {
 
-  public clickCount: number = 0;
+  public clickCount = signal<number>(0);
 
   /**
    * ボタンをクリックしたらカウントアップする。
    */
   public onClick(): void {
-    this.clickCount++;
+    this.clickCount.update(value => value + 1);
   }
 
 }

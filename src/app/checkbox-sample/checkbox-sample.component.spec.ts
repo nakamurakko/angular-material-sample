@@ -14,7 +14,7 @@ describe('CheckboxSampleComponent', () => {
 
     fixture = TestBed.createComponent(CheckboxSampleComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    await fixture.whenStable();
   });
 
   it('should create', () => {

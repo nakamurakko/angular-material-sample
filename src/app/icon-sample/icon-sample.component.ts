@@ -12,7 +12,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatIconModule
   ],
   templateUrl: './icon-sample.component.html',
-  styleUrl: './icon-sample.component.css'
+  styleUrl: './icon-sample.component.css',
 })
 export class IconSampleComponent {
 
