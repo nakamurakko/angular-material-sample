@@ -26,13 +26,13 @@ import { ConfirmDialogComponent, ConfirmDialogData } from './confirm-dialog/conf
 })
 export class DialogSampleComponent {
 
+  private readonly dialog = inject(MatDialog);
+
   /** ダイアログメッセージの結果1 */
   public dialogResult1 = signal<string>('');
 
   /** ダイアログメッセージの結果2 */
   public dialogResult2 = signal<string>('');
-
-  public readonly dialog = inject(MatDialog);
 
   /**
    * ダイアログ呼び出し。

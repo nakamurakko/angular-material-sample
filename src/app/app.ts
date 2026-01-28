@@ -20,6 +20,6 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 })
 export class App {
 
-  protected readonly title = signal('angular-material-sample');
+  protected readonly title = signal<string>('angular-material-sample');
 
 }
