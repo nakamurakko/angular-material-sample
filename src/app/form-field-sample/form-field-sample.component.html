@@ -10,6 +10,14 @@
   </mat-form-field>
 
   <mat-form-field class="form-field-width-stretch">
+    <mat-label>input result</mat-label>
+    <input matInput
+           readonly
+           placeholder="matInput"
+           [value]="inputValue()" />
+  </mat-form-field>
+
+  <mat-form-field class="form-field-width-stretch">
     <mat-label>textarea</mat-label>
     <textarea matInput
               rows="10"
@@ -17,4 +25,12 @@
               [(ngModel)]="textAreaValue"></textarea>
   </mat-form-field>
 
+  <mat-form-field class="form-field-width-stretch">
+    <mat-label>textarea result</mat-label>
+    <textarea matInput
+              readonly
+              rows="10"
+              title="textarea"
+              [value]="textAreaValue()"></textarea>
+  </mat-form-field>
 </div>
