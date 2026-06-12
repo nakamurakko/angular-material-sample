@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatCheckboxChange, MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -16,6 +16,7 @@ import { MatInputModule } from '@angular/material/input';
     MatInputModule
   ],
   templateUrl: './checkbox-sample.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './checkbox-sample.component.css',
 })
 export class CheckboxSampleComponent {

@@ -1,6 +1,6 @@
 import { map, takeWhile } from 'rxjs';
 
-import { Component, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
@@ -22,6 +22,7 @@ import { ConfirmDialogComponent, ConfirmDialogData } from './confirm-dialog/conf
     MatInputModule
   ],
   templateUrl: './dialog-sample.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './dialog-sample.component.css',
 })
 export class DialogSampleComponent {

@@ -1,4 +1,4 @@
-import { Component, model } from '@angular/core';
+import { ChangeDetectionStrategy, Component, model } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -14,6 +14,7 @@ import { MatInputModule } from '@angular/material/input';
     MatInputModule
   ],
   templateUrl: './form-field-sample.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './form-field-sample.component.css',
 })
 export class FormFieldSampleComponent {

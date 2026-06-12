@@ -1,5 +1,5 @@
 import { ENTER } from '@angular/cdk/keycodes';
-import { Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { MatChipInputEvent, MatChipsModule } from '@angular/material/chips';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
@@ -13,6 +13,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatFormFieldModule
   ],
   templateUrl: './chips-sample.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './chips-sample.component.css',
 })
 export class ChipsSampleComponent {

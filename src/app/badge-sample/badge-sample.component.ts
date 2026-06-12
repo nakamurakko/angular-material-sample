@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
 
@@ -12,6 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatButtonModule
   ],
   templateUrl: './badge-sample.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './badge-sample.component.css',
 })
 export class BadgeSampleComponent {

@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MatBottomSheetRef } from '@angular/material/bottom-sheet';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
@@ -13,6 +13,7 @@ import { MatListModule } from '@angular/material/list';
     MatListModule
   ],
   templateUrl: './metal-selection-sheet.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './metal-selection-sheet.component.css',
 })
 export class MetalSelectionSheetComponent {
