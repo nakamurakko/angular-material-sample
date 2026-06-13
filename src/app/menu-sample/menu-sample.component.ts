@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -18,7 +18,6 @@ import { MatMenuModule } from '@angular/material/menu';
     MatMenuModule
   ],
   templateUrl: './menu-sample.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './menu-sample.component.css',
 })
 export class MenuSampleComponent {

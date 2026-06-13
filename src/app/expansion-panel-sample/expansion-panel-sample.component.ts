@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatAccordion, MatExpansionModule } from '@angular/material/expansion';
 
@@ -12,7 +12,6 @@ import { MatAccordion, MatExpansionModule } from '@angular/material/expansion';
     MatExpansionModule
   ],
   templateUrl: './expansion-panel-sample.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './expansion-panel-sample.component.css',
 })
 export class ExpansionPanelSampleComponent {

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -18,7 +18,6 @@ import { Rank } from '../data-types/rank';
     MatSelectModule
   ],
   templateUrl: './select-sample.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './select-sample.component.css',
 })
 export class SelectSampleComponent {

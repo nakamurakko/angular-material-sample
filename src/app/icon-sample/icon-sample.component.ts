@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 
 /**
@@ -12,7 +12,6 @@ import { MatIconModule } from '@angular/material/icon';
     MatIconModule
   ],
   templateUrl: './icon-sample.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './icon-sample.component.css',
 })
 export class IconSampleComponent {

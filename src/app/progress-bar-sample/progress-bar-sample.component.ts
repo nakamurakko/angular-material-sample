@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -20,7 +20,6 @@ import { SampleService } from '../services/sample.service';
     MatProgressBarModule
   ],
   templateUrl: './progress-bar-sample.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './progress-bar-sample.component.css',
 })
 export class ProgressBarSampleComponent {
